@@ -10,7 +10,7 @@ As mentioned above, We have used machine learning to sample the dataset using  P
 
 The original dataset contained 115,675 loan applications in Q1 of 2019. We used the "loan status" to determine whether the application was considered "low" or "high" risk. Applications that had "current" as the "loan status" were classified as "low risk" and the remaining as "high risk". This reduced the dataset to 68,817 total applications with 99% classified as "low risk"
 
-
+![pic_1](pic_1)
 
  75/25 method was used to split the data for training vs testing 51366 low risj and 246 high risk applications were categorized into training sets.
  
