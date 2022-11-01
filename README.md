@@ -94,7 +94,7 @@ The balanced accuracy score increased to 93.2% with this model.
 The "High Risk precision rate increased to 9% with the recall at 92% giving this model an F1 score of 16%.
 "Low Risk" still had a precision rate of 100% with the recall now at 94%.
 
-![pic_16](pic_16.jpg)
+!
 
 ## Summary
 In reviewing all six models, the EasyEnsembleClassifer model yielded the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
