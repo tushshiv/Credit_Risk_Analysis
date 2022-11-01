@@ -10,20 +10,23 @@ As mentioned above, We have used machine learning to sample the dataset using  P
 
 The original dataset contained 115,675 loan applications in Q1 of 2019. We used the "loan status" to determine whether the application was considered "low" or "high" risk. Applications that had "current" as the "loan status" were classified as "low risk" and the remaining as "high risk". This reduced the dataset to 68,817 total applications with 99% classified as "low risk"
 
-![pic_1](pic_1)
+![pic_1](pic_1.jpg)
 
  75/25 method was used to split the data for training vs testing 51366 low risj and 246 high risk applications were categorized into training sets.
  
 **Oversampling**
 RandomOverSampler Model randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,366 records each as High Risk and Low Risk.
+![pic_2](pic_2.jpg)
 
+The "High Risk" precision rate was only 1% with the recall at 69% giving this model an F1 score of 2%.
+"Low Risk" had a precision rate of 100% and recall at 59%.
 
-The "High Risk" precision rate was only 1% with the recall at 66% giving this model an F1 score of 2%.
-"Low Risk" had a precision rate of 100% and recall at 62%.
-![oversamplecm]
+![pic_4](pic_4.jpg)
 
 
 **SMOTE (Synthetic Minority Oversampling Technique) Model**, like RandomOverSampler increases the size of the minority class by creating new values based on the value of the closest neighbors to the minority class instead of random selection.
+
+
 
 The balanced accuracy score improved slightly to 65.1%.
 ![smoteacc]
