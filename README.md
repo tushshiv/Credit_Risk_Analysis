@@ -59,7 +59,7 @@ Combination Sampling
 SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model combines aspects of both oversampling and undersampling. The model classified 68,460 records as High Risk and 62,011 as Low Risk.
 
 
-The balanced accuracy score was 55% when using a combined sampling model.
+The balanced accuracy score was 64.8% when using a combined sampling model.
 ![SMOTEENNacc](pic_10.jpg)
 
 
@@ -83,18 +83,18 @@ The balanced accuracy score increased to 78.85% for this model.
 The "High Risk precision rate increased to 3% with the recall at 70% giving this model an F1 score of 6%.
 "Low Risk" still had a precision rate of 100% with the recall at 87%.
 The top feature by importance was "total_rec_prncp" at 7.9% of the total.
-![HIGHRISK](pic_14.jpg)
+!![pic_15](pic_15.jpg)
 
 EasyEnsembleClassifier Model, a set of classifiers where individual decisions are combined to classify new examples.
-![pic_14](pic_14.jpg)
+
 The balanced accuracy score increased to 93.2% with this model.
 
-![pic_15](pic_15.jpg)
+![pic_14](pic_14.jpg)
 
 The "High Risk precision rate increased to 9% with the recall at 92% giving this model an F1 score of 16%.
 "Low Risk" still had a precision rate of 100% with the recall now at 94%.
 
-!
+![pic_16](pic_16.jpg)
 
 ## Summary
 In reviewing all six models, the EasyEnsembleClassifer model yielded the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
