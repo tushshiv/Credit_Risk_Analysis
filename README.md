@@ -18,6 +18,10 @@ The original dataset contained 115,675 loan applications in Q1 of 2019. We used 
 RandomOverSampler Model randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,366 records each as High Risk and Low Risk.
 ![pic_2](pic_2.jpg)
 
+The balanced accuracy score improved slightly to 64.08%.
+
+![pic_6](pic_6.jpg)
+
 The "High Risk" precision rate was only 1% with the recall at 69% giving this model an F1 score of 2%.
 "Low Risk" had a precision rate of 100% and recall at 59%.
 
@@ -28,68 +32,69 @@ The "High Risk" precision rate was only 1% with the recall at 69% giving this mo
 
 
 
-The balanced accuracy score improved slightly to 65.1%.
-![smoteacc]
+The balanced accuracy score improved slightly to 66.3%.
+
+![smoteacc](pic_5.jpg)
 
 Like RandomOverSampler, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score of 2%.
 "Low Risk" had a precision rate of 100% and an improved recall at 69%.
 
-![smotecm]
+![smotecm](pic_7.jpg)
 
-![smoteclass]
 
 Undersampling
 ClusterCentroids Model, an algorithm that identifies clusters of the majority class to generate synthetic data points that are representative of the clusters. The model classified 246 records each as High Risk and Low Risk.
 
-![undersamplecount]
-
 Balanced accuracy score was lower than the oversampling models at 54.5%.
-![underacc]
+
+![underacc](pic_8.jpg)
 
 The "High Risk" precision rate again was only at 1% with the recall at 69% giving this model an F1 score of 1%.
 "Low Risk" had a precision rate of 100% and with a lower recall at 40% compared to the oversampling models.
-![undercm]
+![undercm](pic_9.jpg)
 
-![underclass]
 
 Deliverable 2: Use the SMOTEENN algorithm to Predict Credit Risk
 Combination Sampling
 SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model combines aspects of both oversampling and undersampling. The model classified 68,460 records as High Risk and 62,011 as Low Risk.
 
-![SMOTEENNcount]
 
-The balanced accuracy score improved to 64.5% when using a combined sampling model.
-![SMOTEENNacc]
+The balanced accuracy score was 55% when using a combined sampling model.
+![SMOTEENNacc](pic_10.jpg)
+
 
 The "High Risk" precision rate did not improve was only 1%, however the recall increased to 72% giving this model an F1 score of 2%.
 "Low Risk" still showed a precision rate of 100% with the recall at 57%.
-![SMOTEENNcm]
+![SMOTEENNcm](pic_11.jpg)
 
-![SMOTEENNclass]
+
 
 ## Use Ensemble Classifiers to Predict Credit Risk
 Compare two new Machine Learning models that reduce bias to predict credit risk. The models classified 51,366 as High Risk and 246 as Low Risk.
 
-![Balancedcount]
+![Balancedcount](pic_12.jpg)
 
 BalancedRandomForestClassifier Model, two trees of the same size and equal size to the minority class are constructed to represent one for the majority class and one for the minority class.
 
-The balanced accuracy score increased to 78.9% for this model.
-![balanceacc]
+The balanced accuracy score increased to 78.85% for this model.
+
+![balanceacc](pic_13.jpg)
 
 The "High Risk precision rate increased to 3% with the recall at 70% giving this model an F1 score of 6%.
 "Low Risk" still had a precision rate of 100% with the recall at 87%.
 The top feature by importance was "total_rec_prncp" at 7.9% of the total.
-
+![HIGHRISK](pic_14.jpg)
 
 EasyEnsembleClassifier Model, a set of classifiers where individual decisions are combined to classify new examples.
-
+![pic_14](pic_14.jpg)
 The balanced accuracy score increased to 93.2% with this model.
 
+![pic_15](pic_15.jpg)
 
 The "High Risk precision rate increased to 9% with the recall at 92% giving this model an F1 score of 16%.
 "Low Risk" still had a precision rate of 100% with the recall now at 94%.
 
+![pic_16](pic_16.jpg)
 
 ## Summary
 In reviewing all six models, the EasyEnsembleClassifer model yielded the best results with an accuracy rate of 93.2% and a 9% precision rate when predicting "High Risk candidates. The sensitivity rate (aka recall) was also the highest at 92% compared to the other models. The result for predicting "Low Risk" was also the highest with the sensitivity rate at 94% and an F1 score of 97%. Therefore, if a model needed to be recommended to perform this type of analysis, then this one would be the clear choice.
